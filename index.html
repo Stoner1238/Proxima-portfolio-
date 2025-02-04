@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxima A3 Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <style>
+    /* Smooth Page Transitions */
+    body {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Navbar Hover Effect */
+    .navbar ul li a:hover {
+      background-color: #0056b3;
+      color: #fff;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Section Title Animation */
+    h1 {
+      animation: slideIn 1s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Button Animation */
+    button {
+      background-color: #0056b3;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #003f7f;
+    }
+  </style>
+
+  <script>
+    // Smooth Scroll for Internal Links
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("a[href^='#']").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
+    <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<header id="home" class="hero">
+  <h1>Welcome to Proxima A3 Portfolio</h1>
+  <p>Delivering Fast, Professional, and Trustworthy Designs</p>
+  <button onclick="window.location.href='#contact';">Let's Connect</button>
+</header>
+
+<!-- Tutoring Announcement Section -->
+<section id="tutoring" class="container mt-5 bg-light p-4 rounded shadow-sm">
+  <h2 class="text-center">Join My WhatsApp Tutoring</h2>
+  <p class="text-center">
+    I offer interactive and personalized tutoring for Stoner Python Programming on WhatsApp. 
+    Learn Python the right way with hands-on projects and expert guidance.
+  </p>
+  <div class="text-center mt-3">
+    <a href="https://wa.me/2347082798562" target="_blank" class="btn btn-success">
+      Join WhatsApp Tutoring
+    </a>
+  </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <footer>
+  <p>Follow Me:</p>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://twitter.com" target="_blank">Twitter</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+  </div>
+  <p>© 2025 Proxima A3 Enterprise | Designed by Aregbe Ayatulah Adekunle</p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
